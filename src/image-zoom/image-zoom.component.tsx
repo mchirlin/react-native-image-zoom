@@ -443,6 +443,7 @@ export default class ImageViewer extends React.Component<Props, State> {
           this.singleClickTimeout = setTimeout(() => {
             if (this.props.onClick) {
               this.props.onClick({ locationX, locationY, pageX, pageY });
+              console.log("X:", locationX, "Y", locationY);
             }
           }, this.props.doubleClickInterval);
         } else {
